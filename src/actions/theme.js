@@ -1,4 +1,4 @@
-export const updateTheme = payload => ({
-  type: 'UPDATE_THEME',
+export const getTheme = payload => ({
+  type: 'GET_THEME',
   payload,
 });

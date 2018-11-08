@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateTheme } from './actions';
+import { getTheme } from 'actions';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {};
   }
   componentDidMount() {
-    console.log(this.props);
+    this.props.getTheme({theme:'red'})
   }
   render() {
     return <AppWrapper>DDD</AppWrapper>;
@@ -27,5 +27,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { updateTheme }
+  { getTheme }
 )(App);
