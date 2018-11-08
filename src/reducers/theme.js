@@ -1,9 +1,9 @@
-export default function themeReducer(state = { theme: 'default' }, action) {
+export default function themeReducer(state = { color: 'default' }, action) {
   switch (action.type) {
     case 'GET_THEME':
       return {
         ...state,
-        theme: action.payload.theme,
+        color: action.payload.color,
       };
 
     default:

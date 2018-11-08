@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getTheme } from 'actions';
-import styled from 'styled-components';
+import { getTheme, fetchProfile } from 'actions/theme';
 
+import styled, { ThemeProvider } from 'styled-components';
+import theme from 'styled-theming';
+
+const backgroundColor = theme('mode', {
+  default: '#278aef',
+  red: '#ff4d78',
+  blue:'#278aef'
+});
+
+const Box = styled.div`
+  background-color: ${backgroundColor};
+`;
 const AppWrapper = styled.div`
   background: #000;
 `;
@@ -12,20 +23,31 @@ class App extends Component {
     this.state = {};
   }
   componentDidMount() {
-    this.props.getTheme({theme:'red'})
+    this.props.getTheme({ color: 'red' });
+    this.props.fetchProfile(127);
+  }
+  componentDidUpdate() {
+    console.log(this.props);
   }
   render() {
-    return <AppWrapper>DDD</AppWrapper>;
+    return (
+      <ThemeProvider theme={{ mode: this.props.theme.color }}>
+        <div>
+          <Box>cscs</Box>
+          <AppWrapper>vdv</AppWrapper>
+        </div>
+      </ThemeProvider>
+    );
   }
 }
 
 function mapStateToProps(state) {
   return {
-    themeReducer: state.themeReducer,
+    theme: state.themeReducer,
   };
 }
 
 export default connect(
   mapStateToProps,
-  { getTheme }
+  { getTheme, fetchProfile }
 )(App);
