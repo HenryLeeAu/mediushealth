@@ -22,3 +22,4 @@ describe('reducers',()=>{
     expect(newState).toEqual({ color: 'red' });
   });
 })
+
