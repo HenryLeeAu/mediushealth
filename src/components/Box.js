@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 import theme from 'styled-theming';
 const backgroundColor = theme('mode', {
@@ -15,8 +14,8 @@ const Box = styled.div`
   background-color: ${backgroundColor};
   font-family: arial;
   color: ${fontColor};
-  height:100%;
-  width:100%;
- font-size:1rem;
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
 `;
-export default Box
+export default Box;

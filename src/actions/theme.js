@@ -1,11 +1,10 @@
+import { GET_THEME } from 'actions/types'
+
 export const getTheme = payload => ({
-  type: 'GET_THEME',
+  type: GET_THEME,
   payload,
 });
-export const bbb = payload => ({
-  type: 'GET_THEME',
-  payload,
-});
+
 
 export const fetchProfile = id => {
   return dispatch => {
@@ -17,6 +16,5 @@ export const fetchProfile = id => {
       .catch(error => {
         console.log('This client is not exist');
       });
-    // you can use api here
   };
 };
