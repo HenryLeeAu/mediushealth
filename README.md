@@ -1,6 +1,4 @@
-
-
-## Available Scripts
+A interview test for Medius Health
 
 In the project directory, you can run:
 
@@ -9,12 +7,18 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### `Behaviour`
+Once user click in the app will bring client_id into ajax call to fetch the configuration for each user.
 
-### `yarn test`
+ex. user 127 has data:{ color:blue } so app will render theme blue
 
+there are 3 themes : default, read, blue.
 
+I have 2 fake api only for id 256 and 127
 
-### `yarn run build`
+http://localhost:3000/?client_id=256 will render red
 
+http://localhost:3000/?client_id=127  will render blue
+
+http://localhost:3000/  will render default
+http://localhost:3000/?client_id=2133 will render default and have a error msg in console.
