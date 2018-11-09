@@ -1,6 +1,6 @@
 A interview test for Medius Health
 
-### `Time spending`
+### `Spending time `
 5hrs
 
 
