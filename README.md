@@ -26,7 +26,11 @@ http://localhost:3000/?client_id=127  will render blue
 http://localhost:3000/  will render default
 http://localhost:3000/?client_id=2133 will render default and have a error msg in console.
 
+### `Using liberaies`
+Redux, Redux-thunk, styled-components, query-string, react-router. 
+
+
 ### `TODO`
 
-It will be better to add a loading screen before fetching the data. User might seen the default theme before geting the configuration.
+It will be better to add a loading screen before fetching the data. User might seen the default theme before getting the configuration.
 
